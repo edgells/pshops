@@ -17,7 +17,7 @@ Route::get('think', function () {
 Route::get('/', 'index/index');
 
 Route::get('hello/:name', 'index/hello');
-Route::get("health/:fnames", "healthFood/goods");
+Route::post("health/goods/", "healthFood/goods");
 Route::get("users/user", "users/getUser");
 Route::miss("index/notFound");
 return [
