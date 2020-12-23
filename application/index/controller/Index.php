@@ -1,6 +1,8 @@
 <?php
 namespace app\index\controller;
 
+use think\Request;
+
 class Index
 {
     public function index()
@@ -13,7 +15,7 @@ class Index
         return 'hello,' . $name;
     }
 
-    public function notFound(): string
+    public function notFound()
     {
         return response("not found");
     }
@@ -25,5 +27,14 @@ class Index
     public function data()
     {
         return json(['name' => 'think.php']);
+    }
+
+    /**
+     * @param Request $request
+     * @route('/req/')
+     */
+    public function req(Request $request){
+
+
     }
 }

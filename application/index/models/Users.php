@@ -9,6 +9,6 @@ use think\Model;
 class Users extends Model
 {
 //    protected $connection
-//    protected $table
+    protected $table = "user";
 
 }
